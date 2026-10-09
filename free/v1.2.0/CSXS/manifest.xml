@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Azmeel by Bu Khalil Studio. Copyright (c) 2026 Bu Khalil Studio (Ibrahim Khalil). All rights reserved. -->
+<ExtensionManifest Version="7.0"
+    ExtensionBundleId="com.bukhalil.azmeel"
+    ExtensionBundleVersion="1.2.0"
+    ExtensionBundleName="Azmeel by Bu Khalil Studio"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ExtensionList>
+    <Extension Id="com.bukhalil.azmeel.panel" Version="1.2.0"/>
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="ILST" Version="[23.0,99.9]"/>
+    </HostList>
+    <LocaleList>
+      <Locale Code="All"/>
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="9.0"/>
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.bukhalil.azmeel.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <ScriptPath>./jsx/host.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--allow-file-access-from-files</Parameter>
+            <Parameter>--allow-file-access</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Azmeel</Menu>
+          <Geometry>
+            <Size><Height>820</Height><Width>340</Width></Size>
+            <MinSize><Height>420</Height><Width>280</Width></MinSize>
+            <MaxSize><Height>3000</Height><Width>1400</Width></MaxSize>
+          </Geometry>
+          <Icons>
+            <Icon Type="Normal">./icons/icon-light-ui.png</Icon>
+            <Icon Type="RollOver">./icons/icon-light-ui.png</Icon>
+            <Icon Type="DarkNormal">./icons/icon-dark-ui.png</Icon>
+            <Icon Type="DarkRollOver">./icons/icon-dark-ui.png</Icon>
+          </Icons>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
